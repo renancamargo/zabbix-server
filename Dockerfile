@@ -1,8 +1,8 @@
-FROM zabbix/zabbix-web-apache-mysql:ubuntu-latest
+FROM ubuntu:latest
 
 RUN apt-get update && apt-get install -y \
-dnsutils \
+pyhton3 \
+sshpass
 
 ENTRYPOINT ["/bin/bash"]
 
-CMD ["/run_zabbix_component.sh", "server", "mysql"]
