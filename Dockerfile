@@ -4,5 +4,6 @@ RUN apt-get update && apt-get install -y \
 ssh \
 dnsutils \
 bc \ 
+sudo \
 python-pip
 RUN pip install py-radius
