@@ -5,5 +5,8 @@ ssh \
 dnsutils \
 bc \ 
 sudo \
+iputils-ping \ 
+nmap \ 
+traceroute \ 
 python-pip
 RUN pip install py-radius
