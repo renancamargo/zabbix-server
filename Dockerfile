@@ -1,4 +1,4 @@
-FROM zabbix/zabbix-server-mysql:ubuntu-4.0-latest
+FROM zabbix/zabbix-server-mysql:ubuntu-4.4-latest
 
 RUN apt-get update && apt-get install -y \
 ssh \
