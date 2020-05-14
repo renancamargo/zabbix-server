@@ -16,6 +16,6 @@ RUN set -eux && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/*
             
-RUN pip install py-radius
+#RUN pip3 install py-radius
 
 USER 1997
