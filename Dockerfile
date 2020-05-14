@@ -3,7 +3,8 @@ FROM zabbix/zabbix-server-mysql:ubuntu-5.0-latest
 USER root
 
 RUN set -eux && \
-    DEBIAN_FRONTEND=noninteractive apt-get -y install \
+    apt-get -y update && \
+    DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends install \
             ssh \
             dnsutils \
             bc \
@@ -11,10 +12,9 @@ RUN set -eux && \
             iputils-ping \
             nmap \
             traceroute \
-            python-pip
- && \
-       apt-get -y autoremove && \
-       rm -rf /var/lib/apt/lists/*
+            python3-pip && \
+    apt-get -y autoremove && \
+    rm -rf /var/lib/apt/lists/*
             
 RUN pip install py-radius
 
