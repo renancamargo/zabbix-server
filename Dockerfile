@@ -12,10 +12,11 @@ RUN set -eux && \
             iputils-ping \
             nmap \
             traceroute \
-            python3-pip && \
+            python3-pip  python3-setuptools python3-wheel && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/*
-            
+
+RUN pip3 install pyrad
 RUN pip3 install py-radius
 
 USER 1997
